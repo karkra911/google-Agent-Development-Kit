@@ -7,6 +7,10 @@ import com.google.cloud.bigquery.TableResult;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * InsightAgent autonomously analyzes query results to derive meaningful insights.
+ * Usage: Instantiate and call analyze(TableResult).
+ */
 public class InsightAgent {
 
     public InsightAgent() {
@@ -42,5 +46,12 @@ public class InsightAgent {
         }
 
         return insights;
+    }
+
+    /**
+     * Standalone entry point for running the InsightAgent independently (demo only).
+     */
+    public static void main(String[] args) {
+        System.out.println("InsightAgent: Please use this agent with a TableResult from QueryAgent.");
     }
 }

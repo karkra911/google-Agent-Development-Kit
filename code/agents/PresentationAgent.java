@@ -1,7 +1,9 @@
 package agents;
 
-import java.util.List;
-
+/**
+ * PresentationAgent autonomously presents insights (e.g., logs, reports, dashboards).
+ * Usage: Instantiate and call present(List<String> insights).
+ */
 public class PresentationAgent {
 
     public PresentationAgent() {
@@ -15,5 +17,12 @@ public class PresentationAgent {
             System.out.println("- " + insight);
         }
         System.out.println("---------------------------");
+    }
+
+    /**
+     * Standalone entry point for running the PresentationAgent independently (demo only).
+     */
+    public static void main(String[] args) {
+        System.out.println("PresentationAgent: Please use this agent with a list of insights from InsightAgent.");
     }
 }

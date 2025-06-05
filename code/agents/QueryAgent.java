@@ -6,6 +6,10 @@ import com.google.cloud.bigquery.QueryJobConfiguration;
 import com.google.cloud.bigquery.TableResult;
 import shared.AgentConfig;
 
+/**
+ * QueryAgent autonomously retrieves and filters data from BigQuery using a configured query.
+ * Usage: Instantiate with AgentConfig and call runQuery().
+ */
 public class QueryAgent {
 
     private final AgentConfig config;
@@ -26,5 +30,14 @@ public class QueryAgent {
         System.out.println("QueryAgent: Query executed successfully.");
 
         return result;
+    }
+
+    /**
+     * Standalone entry point for running the QueryAgent independently.
+     */
+    public static void main(String[] args) throws InterruptedException {
+        AgentConfig config = new AgentConfig("../config/config.json");
+        QueryAgent agent = new QueryAgent(config);
+        agent.runQuery();
     }
 }
