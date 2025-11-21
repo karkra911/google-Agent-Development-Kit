@@ -1,12 +1,5 @@
 {
-  "project_id": "your-gcp-project-id",
-  "bigquery": {
-    "dataset": "agent_dataset",
-    "raw_table": "raw_data",
-    "processed_table": "processed_insights"
-  },
-  "storage": {
-    "bucket_name": "agent-data-bucket",
+  "local_storage": {
     "input_path": "data/input/",
     "output_path": "data/output/"
   },
@@ -16,7 +9,7 @@
       "fetch_interval_minutes": 30
     },
     "query": {
-      "query_template": "SELECT * FROM `agent_dataset.raw_data` WHERE condition = TRUE"
+      "source_file": "data/input/data.csv"
     },
     "insight": {
       "analysis_type": "trend_detection"
