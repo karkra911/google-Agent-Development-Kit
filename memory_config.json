@@ -1,0 +1,42 @@
+{
+  "database_path": "memory_database.db",
+  "backup_directory": "backups",
+  "auto_backup_enabled": true,
+  "backup_interval_hours": 24,
+  
+  "retrieval": {
+    "default_limit": 50,
+    "similarity_threshold": 0.3,
+    "min_importance_threshold": 10.0
+  },
+  
+  "consolidation": {
+    "enabled": true,
+    "auto_consolidate": false,
+    "merge_similarity_threshold": 0.85,
+    "archive_age_days": 365,
+    "min_retrieval_count_to_keep": 5
+  },
+  
+  "decay": {
+    "enabled": true,
+    "decay_rate": 0.1,
+    "half_life_days": 30,
+    "min_importance_floor": 5.0
+  },
+  
+  "importance_calculation": {
+    "emotional_weight": 0.3,
+    "novelty_weight": 0.25,
+    "relevance_weight": 0.25,
+    "recency_weight": 0.2,
+    "retrieval_boost_factor": 0.05
+  },
+  
+  "gui": {
+    "theme": "dark",
+    "refresh_interval_seconds": 5,
+    "max_displayed_memories": 100,
+    "chart_update_interval": 2
+  }
+}
